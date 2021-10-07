@@ -1,32 +1,43 @@
-// const axios = require('axios');
+const axios = require('axios');
 
 // TEST-0
-// Commentaire du test = ce qu'on cherche a faire
-// axios.post('http://localhost:3000/category/', {name: 'Environnement', pays: 'Angleterre'})
-//   .then(function (response) {
-//     console.log(response.data) // handle succes
-//     // { name: 'Environnement', id: 3 }
-//   })
-//   .catch(function (error) {
-//     console.log(error) // handle error
-//   })
-//   .then(function () {
-//     console.log('--- --- ---')
-//   });
+//recupérer la liste des superhéros
+axios.get('http://localhost:3000/superheroes')
+    .then(function (response) {
+        console.log(response.data) // handle succes
+    })
+    .catch(function (error) {
+        console.log(error) // handle error
+    })
+    .then(function () {
+        console.log('--- --- ---')
+    });
 
-// TEST-1
-// Commentaire du test = ce qu'on cherche a faire
-// axios.post('http://localhost:3000/category/', {name: 'Environnement', pays: 'Angleterre'})
-//   .then(function (response) {
-//     console.log(response.data) // handle succes
-//     // { name: 'Environnement', id: 3 }
-//   })
-//   .catch(function (error) {
-//     console.log(error) // handle error
-//   })
-//   .then(function () {
-//     console.log('--- --- ---')
-//   });
+//TEST-1
+// ajouter un nouveau superhéros
+axios.post('http://localhost:3000/superheroes', { name: 'Antman', id: '4' })
+    .then(function (response) {
+        console.log(response.data) // handle succes
+    })
+    .catch(function (error) {
+        console.log(error) // handle error
+    })
+    .then(function () {
+        console.log('--- --- ---')
+    });
+
+// TEST-3
+// recupérer le superhéros qui a l'id placé en parametre
+axios.get('http://localhost:3000/superheroes/1')
+    .then(function (response) {
+        console.log(response.data) // handle succes
+
+    })
+    .catch(function (error) {
+        console.log(error) // handle error
+    }).then(function () {
+        console.log('--- --- ---')
+    })
 
 
 
