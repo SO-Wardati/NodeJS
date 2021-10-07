@@ -39,8 +39,31 @@ axios.get('http://localhost:3000/superheroes/1')
         console.log('--- --- ---')
     })
 
+//TEST-4
+//supprimer un superheros 
+axios.delete('http://localhost:3000/superheroes/1')
+    .then(function (response) {
+        console.log(response.data) // handle succes
 
+    })
+    .catch(function (error) {
+        console.log(error) // handle error
+    }).then(function () {
+        console.log('--- --- ---')
+    })
 
+//TEST-5
+//mettre à jour les infos d'un superhéros
+axios.put('http://localhost:3000/superheroes/1', { name: 'Batman' })
+    .then(function (response) {
+        console.log(response.data) // handle succes
+
+    })
+    .catch(function (error) {
+        console.log(error) // handle error
+    }).then(function () {
+        console.log('--- --- ---')
+    })
 
 
 
